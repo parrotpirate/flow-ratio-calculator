@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Flow Ratio Calculator</title>
+</head>
+<body>
+<div class="calculator">
+  <h2>First Pass</h2>
+  <hr>
+  <div class="calculator__row calculator__row--input">
+    <form id="first-pass-form" class="calculator__form">
+      <div class="calculator__ratio">
+        <label for="first-pass-ratio">Initial Ratio</label>
+        <input id="first-pass-ratio" type="number" autofocus="on" name="first-pass-ratio" placeholder="1.00" min="0" step="0.001" required>
+      </div>
+      <div class="calculator__result">
+        <label for="first-pass-result">First Pass Result</label>
+        <select name="first-pass-result" id="first-pass-result" required>
+          <option value="20">20</option>
+          <option value="15">15</option>
+          <option value="10">10</option>
+          <option value="5">5</option>
+          <option value="0" selected>0</option>
+          <option value="-5">-5</option>
+          <option value="-10">-10</option>
+          <option value="-15">-15</option>
+          <option value="-20">-20</option>
+        </select>
+      </div>
+      <div class="calculator__submit">
+        <input type="submit" id="first-pass-submit" value="Submit">
+      </div>
+    </form>
+  </div>
+  <div class="calculator__row calculator__row--output">
+    <span class="calculator__output-value" id="first-pass-output"></span>
+  </div>
+</div>
+<div class="calculator">
+  <h2>Second Pass</h2>
+  <hr>
+  <div class="calculator__row calculator__row--input">
+    <form id="second-pass-form" class="calculator__form">
+      <div class="calculator__ratio">
+        <label for="second-pass-ratio">Initial Ratio</label>
+        <input id="second-pass-ratio" type="number" autofocus="on" name="second-pass-ratio" placeholder="1.00" min="0" step="0.001" required>
+      </div>
+          <div class="calculator__result">
+      <label for="second-pass-result">Second Pass Result</label>
+      <select name="second-pass-result" id="second-pass-result" required>
+        <option value="0">0</option>
+        <option value="-1">-1</option>
+        <option value="-2">-2</option>
+        <option value="-3">-3</option>
+        <option value="-4">-4</option>
+        <option value="-5">-5</option>
+        <option value="-6">-6</option>
+        <option value="-7">-7</option>
+        <option value="-8">-8</option>
+        <option value="-9">-9</option>
+      </select>
+    </div>
+    <div class="calculator__submit">
+      <input type="submit" Value="Submit" id="second-pass-submit">
+    </div>
+    </form>
+  </div>
+  <div class="calculator__row calculator__row--ouput">
+    <span class="calculator__output-value" id="second-pass-output"></span>
+  </div>
+</div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

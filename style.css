@@ -1,0 +1,68 @@
+.calculator__row {
+  display: flex;
+}
+
+.calculator__row:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.calculator__form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.calculator__ratio,
+.calculator__result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator__output-value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border: 1px solid darkgreen;
+  transition: all 200ms ease-in-out;
+}
+.calculator__output-value::after {
+  content: "⎗ Click to Copy";
+}
+.calculator__output-value.clicked::after {
+  content: '✓ Copied!';
+  color: darkolivegreen;
+}
+.calculator__output-value:not(.finished) {
+  visibility: hidden;
+  display: none;
+  pointer-events: none;
+}
+
+.calculator__output-value.finished {
+  cursor: pointer;
+  color: darkgreen;
+}
+
+.loading {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
